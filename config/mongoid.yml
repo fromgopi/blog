@@ -1,0 +1,11 @@
+development:
+  # Configure available database clients. (required)
+  clients:
+    # Defines the default client. (required)
+    default:
+      database: cookbook
+      hosts:
+        - localhost:27017
+      options:
+        user: cbuser
+        password: cbuser

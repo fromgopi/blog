@@ -5,3 +5,335 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 14ms (Views: 9.3ms | Allocations: 2638)
 
 
+Started GET "/" for ::1 at 2022-04-21 20:29:15 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/oscarmild/.rvm/gems/ruby-2.6.9/gems/railties-6.0.4.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/oscarmild/.rvm/gems/ruby-2.6.9/gems/railties-6.0.4.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.5ms | Allocations: 611)
+Completed 200 OK in 16ms (Views: 10.6ms | MongoDB: 0.0ms | Allocations: 2462)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 20:29:21 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 5.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:3 | cookbook.saslStart | STARTED | {}
+MONGODB | localhost:27017 req:6 | cookbook.saslStart | FAILED | [18:AuthenticationFailed]: Authentication failed. | 0.005481000000145286s
+MONGODB | Failed to authenticate to localhost:27017: Mongo::Auth::Unauthorized: User cbuser (mechanism: scram) is not authorized to access cookbook (auth source: cookbook, used mechanism: SCRAM-SHA-1, used server: localhost:27017 (STANDALONE)): [18:AuthenticationFailed]: Authentication failed.
+  Rendered posts/index.html.erb within layouts/application (Duration: 95.2ms | Allocations: 6513)
+Completed 500 Internal Server Error in 115ms (MongoDB: 0.0ms | Allocations: 19232)
+
+
+  
+ActionView::Template::Error (User cbuser (mechanism: scram) is not authorized to access cookbook (auth source: cookbook, used mechanism: SCRAM-SHA-1, used server: localhost:27017 (STANDALONE)): [18:AuthenticationFailed]: Authentication failed.):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @posts.each do |post| %>
+    16:       <tr>
+    17:         <td><%= post.title %></td>
+    18:         <td><%= post.body %></td>
+  
+app/views/posts/index.html.erb:15
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+Started GET "/posts" for ::1 at 2022-04-21 20:32:53 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2156)
+Completed 500 Internal Server Error in 17ms (MongoDB: 0.0ms | Allocations: 8203)
+
+
+  
+ActionView::Template::Error (Bad URI: mongodb+srv://cbuser:cbuser@localhost:27017/cookbook
+It is not allowed to specify a port in a connection string with the 'mongodb+srv' protocol.
+MongoDB URI must be in the following format: mongodb+srv://[username:password@]host[/[database][?options]]
+Please see the following URL for more information: http://docs.mongodb.org/manual/reference/connection-string/
+):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @posts.each do |post| %>
+    16:       <tr>
+    17:         <td><%= post.title %></td>
+    18:         <td><%= post.body %></td>
+  
+app/views/posts/index.html.erb:15
+Started GET "/posts" for ::1 at 2022-04-21 20:32:54 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1086)
+Completed 500 Internal Server Error in 3ms (MongoDB: 0.0ms | Allocations: 1445)
+
+
+  
+ActionView::Template::Error (Bad URI: mongodb+srv://cbuser:cbuser@localhost:27017/cookbook
+It is not allowed to specify a port in a connection string with the 'mongodb+srv' protocol.
+MongoDB URI must be in the following format: mongodb+srv://[username:password@]host[/[database][?options]]
+Please see the following URL for more information: http://docs.mongodb.org/manual/reference/connection-string/
+):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @posts.each do |post| %>
+    16:       <tr>
+    17:         <td><%= post.title %></td>
+    18:         <td><%= post.body %></td>
+  
+app/views/posts/index.html.erb:15
+Started GET "/posts" for ::1 at 2022-04-21 20:37:28 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:6 | cookbook.saslStart | STARTED | {}
+MONGODB | localhost:27017 req:6 | cookbook.saslStart | FAILED | [18:AuthenticationFailed]: Authentication failed. | 0.0012080000014975667s
+MONGODB | Failed to authenticate to localhost:27017: Mongo::Auth::Unauthorized: User cbuser (mechanism: scram) is not authorized to access cookbook (auth source: cookbook, used mechanism: SCRAM-SHA-1, used server: localhost:27017 (STANDALONE)): [18:AuthenticationFailed]: Authentication failed.
+  Rendered posts/index.html.erb within layouts/application (Duration: 35.9ms | Allocations: 12452)
+Completed 500 Internal Server Error in 53ms (MongoDB: 0.0ms | Allocations: 18684)
+
+
+  
+ActionView::Template::Error (User cbuser (mechanism: scram) is not authorized to access cookbook (auth source: cookbook, used mechanism: SCRAM-SHA-1, used server: localhost:27017 (STANDALONE)): [18:AuthenticationFailed]: Authentication failed.):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @posts.each do |post| %>
+    16:       <tr>
+    17:         <td><%= post.title %></td>
+    18:         <td><%= post.body %></td>
+  
+app/views/posts/index.html.erb:15
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+Started GET "/posts" for ::1 at 2022-04-21 21:03:01 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:26 | atg-crm.saslContinue | STARTED | {}
+MONGODB | localhost:27017 req:6 | atg-crm.saslContinue | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:7 conn:1:1 sconn:26 | atg-crm.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"atg-crm", "lsid"=>{"id"=><BSON::Binary:0x2409681160 type=uuid data=0x3144a67231734c90...>}}
+MONGODB | localhost:27017 req:7 | atg-crm.find | SUCCEEDED | 0.000s
+  Rendered posts/index.html.erb within layouts/application (Duration: 101.1ms | Allocations: 75870)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/oscarmild/Documents/workspack/rails-expo/blog/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 3cb416f41fa523018972
+Version: webpack 4.46.0
+Time: 849ms
+Built at: 04/21/2022 9:03:04 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-3cb66649e2322e793167.js   89.2 KiB  application  [emitted] [immutable]  application
+js/application-3cb66649e2322e793167.js.map   97.9 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-3cb66649e2322e793167.js js/application-3cb66649e2322e793167.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 707 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 2 hidden modules
+
+Completed 200 OK in 3060ms (Views: 3045.8ms | MongoDB: 0.0ms | Allocations: 1787528)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:03:04 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:8 conn:1:1 sconn:26 | atg-crm.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"atg-crm", "lsid"=>{"id"=><BSON::Binary:0x2409681160 type=uuid data=0x3144a67231734c90...>}}
+MONGODB | localhost:27017 req:8 | atg-crm.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1607)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | MongoDB: 0.0ms | Allocations: 8195)
+
+
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+Started GET "/posts/new" for ::1 at 2022-04-21 21:03:17 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 22.4ms | Allocations: 6498)
+  Rendered posts/new.html.erb within layouts/application (Duration: 23.5ms | Allocations: 6855)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 30.6ms | MongoDB: 0.0ms | Allocations: 13657)
+
+
+Started POST "/posts" for ::1 at 2022-04-21 21:03:35 +0530
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"OyKQjPZhr5w9z0FK3RWCgPhbDQInZsjW0b5GB04TCNxFrMCh9lc6XUDO+POaDCspu0ZW5ze39yPEBRz4blGfzQ==", "post"=>{"title"=>"Hello Post", "body"=>"Hello Post. This post is a test post"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 req:12 conn:1:1 sconn:26 | atg-crm.insert | STARTED | {"insert"=>"posts", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('6261794ff055213f6511d164'), "title"=>"Hello Post", "body"=>"Hello Post. This post is a test post"}], "$db"=>"atg-crm", "lsid"=>{"id"=><BSON::Binary:0x2409681160 type=uuid data=...
+MONGODB | localhost:27017 req:12 | atg-crm.insert | SUCCEEDED | 0.096s
+Redirected to http://localhost:3000/posts/6261794ff055213f6511d164
+Completed 302 Found in 102ms (MongoDB: 0.1ms | Allocations: 7524)
+
+
+Started GET "/posts/6261794ff055213f6511d164" for ::1 at 2022-04-21 21:03:35 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6261794ff055213f6511d164"}
+MONGODB | localhost:27017 req:13 conn:1:1 sconn:26 | atg-crm.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('6261794ff055213f6511d164')}, "$db"=>"atg-crm", "lsid"=>{"id"=><BSON::Binary:0x2409681160 type=uuid data=0x3144a67231734c90...>}}
+MONGODB | localhost:27017 req:13 | atg-crm.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 269)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 13.0ms | MongoDB: 0.0ms | Allocations: 8480)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:03:38 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:14 conn:1:1 sconn:26 | atg-crm.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"atg-crm", "lsid"=>{"id"=><BSON::Binary:0x2409681160 type=uuid data=0x3144a67231734c90...>}}
+MONGODB | localhost:27017 req:14 | atg-crm.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1751)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.2ms | MongoDB: 0.0ms | Allocations: 14126)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:09:28 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:42 | cookbook.saslStart | STARTED | {}
+MONGODB | localhost:27017 req:6 | cookbook.saslStart | FAILED | [18:AuthenticationFailed]: Authentication failed. | 0.0030079999996814877s
+MONGODB | Failed to authenticate to localhost:27017: Mongo::Auth::Unauthorized: User cbuser (mechanism: scram) is not authorized to access cookbook (auth source: cookbook, used mechanism: SCRAM-SHA-1, used server: localhost:27017 (STANDALONE)): [18:AuthenticationFailed]: Authentication failed.
+  Rendered posts/index.html.erb within layouts/application (Duration: 24.7ms | Allocations: 12989)
+Completed 500 Internal Server Error in 41ms (MongoDB: 0.0ms | Allocations: 19310)
+
+
+  
+ActionView::Template::Error (User cbuser (mechanism: scram) is not authorized to access cookbook (auth source: cookbook, used mechanism: SCRAM-SHA-1, used server: localhost:27017 (STANDALONE)): [18:AuthenticationFailed]: Authentication failed.):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @posts.each do |post| %>
+    16:       <tr>
+    17:         <td><%= post.title %></td>
+    18:         <td><%= post.body %></td>
+  
+app/views/posts/index.html.erb:15
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+Started PUT "/__web_console/repl_sessions/5b7b7f91352f7f8646cd3c0124a6a19b" for ::1 at 2022-04-21 21:13:16 +0530
+Started PUT "/__web_console/repl_sessions/5b7b7f91352f7f8646cd3c0124a6a19b" for ::1 at 2022-04-21 21:13:17 +0530
+Started PUT "/__web_console/repl_sessions/5b7b7f91352f7f8646cd3c0124a6a19b" for ::1 at 2022-04-21 21:13:20 +0530
+Started PUT "/__web_console/repl_sessions/5b7b7f91352f7f8646cd3c0124a6a19b" for ::1 at 2022-04-21 21:13:21 +0530
+Started PUT "/__web_console/repl_sessions/5b7b7f91352f7f8646cd3c0124a6a19b" for ::1 at 2022-04-21 21:13:24 +0530
+Started PUT "/__web_console/repl_sessions/5b7b7f91352f7f8646cd3c0124a6a19b" for ::1 at 2022-04-21 21:13:27 +0530
+Started GET "/posts" for ::1 at 2022-04-21 21:13:59 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:45 | cookbook.saslStart | STARTED | {}
+MONGODB | localhost:27017 req:6 | cookbook.saslStart | FAILED | [18:AuthenticationFailed]: Authentication failed. | 0.0017279999738093466s
+MONGODB | Failed to authenticate to localhost:27017: Mongo::Auth::Unauthorized: User root (mechanism: scram) is not authorized to access cookbook (auth source: cookbook, used mechanism: SCRAM-SHA-1, used server: localhost:27017 (STANDALONE)): [18:AuthenticationFailed]: Authentication failed.
+  Rendered posts/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 13099)
+Completed 500 Internal Server Error in 36ms (MongoDB: 0.0ms | Allocations: 19313)
+
+
+  
+ActionView::Template::Error (User root (mechanism: scram) is not authorized to access cookbook (auth source: cookbook, used mechanism: SCRAM-SHA-1, used server: localhost:27017 (STANDALONE)): [18:AuthenticationFailed]: Authentication failed.):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @posts.each do |post| %>
+    16:       <tr>
+    17:         <td><%= post.title %></td>
+    18:         <td><%= post.body %></td>
+  
+app/views/posts/index.html.erb:15
+Started GET "/posts" for ::1 at 2022-04-21 21:16:00 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:50 | cookbook.saslContinue | STARTED | {}
+MONGODB | localhost:27017 req:6 | cookbook.saslContinue | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:7 conn:1:1 sconn:50 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2302704500 type=uuid data=0xbdf078d4acaf4940...>}}
+MONGODB | localhost:27017 req:7 | cookbook.find | SUCCEEDED | 0.000s
+  Rendered posts/index.html.erb within layouts/application (Duration: 46.6ms | Allocations: 34949)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 709ms (Views: 694.3ms | MongoDB: 0.0ms | Allocations: 1690760)
+
+
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/oscarmild/.rvm/gems/ruby-2.6.9/bin/rake:23)
+Started GET "/posts/new" for ::1 at 2022-04-21 21:16:47 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 24.0ms | Allocations: 10102)
+  Rendered posts/new.html.erb within layouts/application (Duration: 25.2ms | Allocations: 10459)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.8ms | MongoDB: 0.0ms | Allocations: 17167)
+
+
