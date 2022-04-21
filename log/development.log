@@ -1,0 +1,659 @@
+Started GET "/" for ::1 at 2022-04-21 19:24:00 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/oscarmild/.rvm/gems/ruby-2.6.9/gems/railties-6.0.4.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/oscarmild/.rvm/gems/ruby-2.6.9/gems/railties-6.0.4.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.2ms | Allocations: 461)
+Completed 200 OK in 14ms (Views: 9.3ms | Allocations: 2638)
+
+
+Started GET "/" for ::1 at 2022-04-21 20:29:15 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/oscarmild/.rvm/gems/ruby-2.6.9/gems/railties-6.0.4.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/oscarmild/.rvm/gems/ruby-2.6.9/gems/railties-6.0.4.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.5ms | Allocations: 611)
+Completed 200 OK in 16ms (Views: 10.6ms | MongoDB: 0.0ms | Allocations: 2462)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 20:29:21 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 5.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:3 | cookbook.saslStart | STARTED | {}
+MONGODB | localhost:27017 req:6 | cookbook.saslStart | FAILED | [18:AuthenticationFailed]: Authentication failed. | 0.005481000000145286s
+MONGODB | Failed to authenticate to localhost:27017: Mongo::Auth::Unauthorized: User cbuser (mechanism: scram) is not authorized to access cookbook (auth source: cookbook, used mechanism: SCRAM-SHA-1, used server: localhost:27017 (STANDALONE)): [18:AuthenticationFailed]: Authentication failed.
+  Rendered posts/index.html.erb within layouts/application (Duration: 95.2ms | Allocations: 6513)
+Completed 500 Internal Server Error in 115ms (MongoDB: 0.0ms | Allocations: 19232)
+
+
+  
+ActionView::Template::Error (User cbuser (mechanism: scram) is not authorized to access cookbook (auth source: cookbook, used mechanism: SCRAM-SHA-1, used server: localhost:27017 (STANDALONE)): [18:AuthenticationFailed]: Authentication failed.):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @posts.each do |post| %>
+    16:       <tr>
+    17:         <td><%= post.title %></td>
+    18:         <td><%= post.body %></td>
+  
+app/views/posts/index.html.erb:15
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+Started GET "/posts" for ::1 at 2022-04-21 20:32:53 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2156)
+Completed 500 Internal Server Error in 17ms (MongoDB: 0.0ms | Allocations: 8203)
+
+
+  
+ActionView::Template::Error (Bad URI: mongodb+srv://cbuser:cbuser@localhost:27017/cookbook
+It is not allowed to specify a port in a connection string with the 'mongodb+srv' protocol.
+MongoDB URI must be in the following format: mongodb+srv://[username:password@]host[/[database][?options]]
+Please see the following URL for more information: http://docs.mongodb.org/manual/reference/connection-string/
+):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @posts.each do |post| %>
+    16:       <tr>
+    17:         <td><%= post.title %></td>
+    18:         <td><%= post.body %></td>
+  
+app/views/posts/index.html.erb:15
+Started GET "/posts" for ::1 at 2022-04-21 20:32:54 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1086)
+Completed 500 Internal Server Error in 3ms (MongoDB: 0.0ms | Allocations: 1445)
+
+
+  
+ActionView::Template::Error (Bad URI: mongodb+srv://cbuser:cbuser@localhost:27017/cookbook
+It is not allowed to specify a port in a connection string with the 'mongodb+srv' protocol.
+MongoDB URI must be in the following format: mongodb+srv://[username:password@]host[/[database][?options]]
+Please see the following URL for more information: http://docs.mongodb.org/manual/reference/connection-string/
+):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @posts.each do |post| %>
+    16:       <tr>
+    17:         <td><%= post.title %></td>
+    18:         <td><%= post.body %></td>
+  
+app/views/posts/index.html.erb:15
+Started GET "/posts" for ::1 at 2022-04-21 20:37:28 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:6 | cookbook.saslStart | STARTED | {}
+MONGODB | localhost:27017 req:6 | cookbook.saslStart | FAILED | [18:AuthenticationFailed]: Authentication failed. | 0.0012080000014975667s
+MONGODB | Failed to authenticate to localhost:27017: Mongo::Auth::Unauthorized: User cbuser (mechanism: scram) is not authorized to access cookbook (auth source: cookbook, used mechanism: SCRAM-SHA-1, used server: localhost:27017 (STANDALONE)): [18:AuthenticationFailed]: Authentication failed.
+  Rendered posts/index.html.erb within layouts/application (Duration: 35.9ms | Allocations: 12452)
+Completed 500 Internal Server Error in 53ms (MongoDB: 0.0ms | Allocations: 18684)
+
+
+  
+ActionView::Template::Error (User cbuser (mechanism: scram) is not authorized to access cookbook (auth source: cookbook, used mechanism: SCRAM-SHA-1, used server: localhost:27017 (STANDALONE)): [18:AuthenticationFailed]: Authentication failed.):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @posts.each do |post| %>
+    16:       <tr>
+    17:         <td><%= post.title %></td>
+    18:         <td><%= post.body %></td>
+  
+app/views/posts/index.html.erb:15
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+Started GET "/posts" for ::1 at 2022-04-21 21:03:01 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:26 | atg-crm.saslContinue | STARTED | {}
+MONGODB | localhost:27017 req:6 | atg-crm.saslContinue | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:7 conn:1:1 sconn:26 | atg-crm.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"atg-crm", "lsid"=>{"id"=><BSON::Binary:0x2409681160 type=uuid data=0x3144a67231734c90...>}}
+MONGODB | localhost:27017 req:7 | atg-crm.find | SUCCEEDED | 0.000s
+  Rendered posts/index.html.erb within layouts/application (Duration: 101.1ms | Allocations: 75870)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/oscarmild/Documents/workspack/rails-expo/blog/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 3cb416f41fa523018972
+Version: webpack 4.46.0
+Time: 849ms
+Built at: 04/21/2022 9:03:04 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-3cb66649e2322e793167.js   89.2 KiB  application  [emitted] [immutable]  application
+js/application-3cb66649e2322e793167.js.map   97.9 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-3cb66649e2322e793167.js js/application-3cb66649e2322e793167.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 707 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 2 hidden modules
+
+Completed 200 OK in 3060ms (Views: 3045.8ms | MongoDB: 0.0ms | Allocations: 1787528)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:03:04 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:8 conn:1:1 sconn:26 | atg-crm.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"atg-crm", "lsid"=>{"id"=><BSON::Binary:0x2409681160 type=uuid data=0x3144a67231734c90...>}}
+MONGODB | localhost:27017 req:8 | atg-crm.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1607)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | MongoDB: 0.0ms | Allocations: 8195)
+
+
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+Started GET "/posts/new" for ::1 at 2022-04-21 21:03:17 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 22.4ms | Allocations: 6498)
+  Rendered posts/new.html.erb within layouts/application (Duration: 23.5ms | Allocations: 6855)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 30.6ms | MongoDB: 0.0ms | Allocations: 13657)
+
+
+Started POST "/posts" for ::1 at 2022-04-21 21:03:35 +0530
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"OyKQjPZhr5w9z0FK3RWCgPhbDQInZsjW0b5GB04TCNxFrMCh9lc6XUDO+POaDCspu0ZW5ze39yPEBRz4blGfzQ==", "post"=>{"title"=>"Hello Post", "body"=>"Hello Post. This post is a test post"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 req:12 conn:1:1 sconn:26 | atg-crm.insert | STARTED | {"insert"=>"posts", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('6261794ff055213f6511d164'), "title"=>"Hello Post", "body"=>"Hello Post. This post is a test post"}], "$db"=>"atg-crm", "lsid"=>{"id"=><BSON::Binary:0x2409681160 type=uuid data=...
+MONGODB | localhost:27017 req:12 | atg-crm.insert | SUCCEEDED | 0.096s
+Redirected to http://localhost:3000/posts/6261794ff055213f6511d164
+Completed 302 Found in 102ms (MongoDB: 0.1ms | Allocations: 7524)
+
+
+Started GET "/posts/6261794ff055213f6511d164" for ::1 at 2022-04-21 21:03:35 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6261794ff055213f6511d164"}
+MONGODB | localhost:27017 req:13 conn:1:1 sconn:26 | atg-crm.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('6261794ff055213f6511d164')}, "$db"=>"atg-crm", "lsid"=>{"id"=><BSON::Binary:0x2409681160 type=uuid data=0x3144a67231734c90...>}}
+MONGODB | localhost:27017 req:13 | atg-crm.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 269)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 13.0ms | MongoDB: 0.0ms | Allocations: 8480)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:03:38 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:14 conn:1:1 sconn:26 | atg-crm.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"atg-crm", "lsid"=>{"id"=><BSON::Binary:0x2409681160 type=uuid data=0x3144a67231734c90...>}}
+MONGODB | localhost:27017 req:14 | atg-crm.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1751)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.2ms | MongoDB: 0.0ms | Allocations: 14126)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:09:28 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:42 | cookbook.saslStart | STARTED | {}
+MONGODB | localhost:27017 req:6 | cookbook.saslStart | FAILED | [18:AuthenticationFailed]: Authentication failed. | 0.0030079999996814877s
+MONGODB | Failed to authenticate to localhost:27017: Mongo::Auth::Unauthorized: User cbuser (mechanism: scram) is not authorized to access cookbook (auth source: cookbook, used mechanism: SCRAM-SHA-1, used server: localhost:27017 (STANDALONE)): [18:AuthenticationFailed]: Authentication failed.
+  Rendered posts/index.html.erb within layouts/application (Duration: 24.7ms | Allocations: 12989)
+Completed 500 Internal Server Error in 41ms (MongoDB: 0.0ms | Allocations: 19310)
+
+
+  
+ActionView::Template::Error (User cbuser (mechanism: scram) is not authorized to access cookbook (auth source: cookbook, used mechanism: SCRAM-SHA-1, used server: localhost:27017 (STANDALONE)): [18:AuthenticationFailed]: Authentication failed.):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @posts.each do |post| %>
+    16:       <tr>
+    17:         <td><%= post.title %></td>
+    18:         <td><%= post.body %></td>
+  
+app/views/posts/index.html.erb:15
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+Started PUT "/__web_console/repl_sessions/5b7b7f91352f7f8646cd3c0124a6a19b" for ::1 at 2022-04-21 21:13:16 +0530
+Started PUT "/__web_console/repl_sessions/5b7b7f91352f7f8646cd3c0124a6a19b" for ::1 at 2022-04-21 21:13:17 +0530
+Started PUT "/__web_console/repl_sessions/5b7b7f91352f7f8646cd3c0124a6a19b" for ::1 at 2022-04-21 21:13:20 +0530
+Started PUT "/__web_console/repl_sessions/5b7b7f91352f7f8646cd3c0124a6a19b" for ::1 at 2022-04-21 21:13:21 +0530
+Started PUT "/__web_console/repl_sessions/5b7b7f91352f7f8646cd3c0124a6a19b" for ::1 at 2022-04-21 21:13:24 +0530
+Started PUT "/__web_console/repl_sessions/5b7b7f91352f7f8646cd3c0124a6a19b" for ::1 at 2022-04-21 21:13:27 +0530
+Started GET "/posts" for ::1 at 2022-04-21 21:13:59 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:45 | cookbook.saslStart | STARTED | {}
+MONGODB | localhost:27017 req:6 | cookbook.saslStart | FAILED | [18:AuthenticationFailed]: Authentication failed. | 0.0017279999738093466s
+MONGODB | Failed to authenticate to localhost:27017: Mongo::Auth::Unauthorized: User root (mechanism: scram) is not authorized to access cookbook (auth source: cookbook, used mechanism: SCRAM-SHA-1, used server: localhost:27017 (STANDALONE)): [18:AuthenticationFailed]: Authentication failed.
+  Rendered posts/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 13099)
+Completed 500 Internal Server Error in 36ms (MongoDB: 0.0ms | Allocations: 19313)
+
+
+  
+ActionView::Template::Error (User root (mechanism: scram) is not authorized to access cookbook (auth source: cookbook, used mechanism: SCRAM-SHA-1, used server: localhost:27017 (STANDALONE)): [18:AuthenticationFailed]: Authentication failed.):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @posts.each do |post| %>
+    16:       <tr>
+    17:         <td><%= post.title %></td>
+    18:         <td><%= post.body %></td>
+  
+app/views/posts/index.html.erb:15
+Started GET "/posts" for ::1 at 2022-04-21 21:16:00 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:50 | cookbook.saslContinue | STARTED | {}
+MONGODB | localhost:27017 req:6 | cookbook.saslContinue | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:7 conn:1:1 sconn:50 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2302704500 type=uuid data=0xbdf078d4acaf4940...>}}
+MONGODB | localhost:27017 req:7 | cookbook.find | SUCCEEDED | 0.000s
+  Rendered posts/index.html.erb within layouts/application (Duration: 46.6ms | Allocations: 34949)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 709ms (Views: 694.3ms | MongoDB: 0.0ms | Allocations: 1690760)
+
+
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/oscarmild/.rvm/gems/ruby-2.6.9/bin/rake:23)
+Started GET "/posts/new" for ::1 at 2022-04-21 21:16:47 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 24.0ms | Allocations: 10102)
+  Rendered posts/new.html.erb within layouts/application (Duration: 25.2ms | Allocations: 10459)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.8ms | MongoDB: 0.0ms | Allocations: 17167)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:23:37 +0530
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 4ms (MongoDB: 0.0ms | Allocations: 1425)
+
+
+  
+SyntaxError (/Users/oscarmild/Documents/workspack/rails-expo/blog/app/models/post.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+...has_many :comments, dependent :destroy
+...                              ^):
+  
+app/models/post.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/post.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/post.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/controllers/posts_controller.rb:6:in `index'
+Started GET "/posts" for ::1 at 2022-04-21 21:23:56 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:53 | cookbook.saslContinue | STARTED | {}
+MONGODB | localhost:27017 req:6 | cookbook.saslContinue | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:7 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:7 | cookbook.find | SUCCEEDED | 0.000s
+  Rendered posts/index.html.erb within layouts/application (Duration: 23.6ms | Allocations: 26761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 692ms (Views: 685.1ms | MongoDB: 0.0ms | Allocations: 1688520)
+
+
+Started GET "/posts/new" for ::1 at 2022-04-21 21:23:59 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 24.2ms | Allocations: 10106)
+  Rendered posts/new.html.erb within layouts/application (Duration: 25.5ms | Allocations: 10460)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 33.1ms | MongoDB: 0.0ms | Allocations: 17176)
+
+
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+Started POST "/posts" for ::1 at 2022-04-21 21:24:13 +0530
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"IK9VCLpq6TZGRkDqa+7MmPW0HiHArVYFi5uK1x5UZuleIQUlulx89ztH+VMs92UxtqlFxNB8afCeINAoPhbx+A==", "post"=>{"title"=>"Nyc Post", "body"=>"Hellow Post"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 req:9 conn:1:1 sconn:53 | cookbook.insert | STARTED | {"insert"=>"posts", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('62617e25f055214175400d17'), "title"=>"Nyc Post", "body"=>"Hellow Post"}], "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:9 | cookbook.insert | SUCCEEDED | 0.090s
+Redirected to http://localhost:3000/posts/62617e25f055214175400d17
+Completed 302 Found in 103ms (MongoDB: 0.1ms | Allocations: 13236)
+
+
+Started GET "/posts/62617e25f055214175400d17" for ::1 at 2022-04-21 21:24:13 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62617e25f055214175400d17"}
+MONGODB | localhost:27017 req:10 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:10 | cookbook.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 268)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 11.0ms | MongoDB: 0.0ms | Allocations: 8477)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:24:15 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:11 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:11 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1753)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.6ms | MongoDB: 0.0ms | Allocations: 8304)
+
+
+Started GET "/posts/62617e25f055214175400d17" for ::1 at 2022-04-21 21:24:20 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62617e25f055214175400d17"}
+MONGODB | localhost:27017 req:13 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:13 | cookbook.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 86)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.8ms | MongoDB: 0.0ms | Allocations: 8105)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:25:33 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:21 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:21 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2001)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.4ms | MongoDB: 0.0ms | Allocations: 9254)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:25:34 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:22 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:22 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1755)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.7ms | MongoDB: 0.0ms | Allocations: 8307)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:26:54 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:31 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:31 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2002)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.9ms | MongoDB: 0.0ms | Allocations: 9267)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:26:56 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:32 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:32 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1752)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.9ms | MongoDB: 0.0ms | Allocations: 8304)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:26:56 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:34 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:34 | cookbook.find | SUCCEEDED | 0.002s
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1743)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.9ms | MongoDB: 0.0ms | Allocations: 8282)
+
+
+Started GET "/" for ::1 at 2022-04-21 21:27:01 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/oscarmild/.rvm/gems/ruby-2.6.9/gems/railties-6.0.4.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/oscarmild/.rvm/gems/ruby-2.6.9/gems/railties-6.0.4.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.8ms | Allocations: 189)
+Completed 200 OK in 9ms (Views: 7.6ms | MongoDB: 0.0ms | Allocations: 931)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:27:05 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:35 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:35 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3477)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.5ms | MongoDB: 0.0ms | Allocations: 18010)
+
+
+Started GET "/posts/62617e25f055214175400d17" for ::1 at 2022-04-21 21:27:07 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62617e25f055214175400d17"}
+MONGODB | localhost:27017 req:37 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:37 | cookbook.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.erb within layouts/application
+MONGODB | localhost:27017 req:38 conn:1:1 sconn:53 | cookbook.count | STARTED | {"count"=>"comments", "query"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:38 | cookbook.count | SUCCEEDED | 0.005s
+MONGODB | localhost:27017 req:39 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"comments", "filter"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:39 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 5.1ms | Allocations: 1462)
+  Rendered posts/show.html.erb within layouts/application (Duration: 17.0ms | Allocations: 4895)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 29.4ms | MongoDB: 0.0ms | Allocations: 13019)
+
+
+Started POST "/comments" for ::1 at 2022-04-21 21:27:35 +0530
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"EYLVwIXqTd4gHn7h2DomD/PzQnxIsyfqZkfMtnhdn9MzepcZ6OObpTps6baLFbYBDuKo0E+4N5OycYb/gvATkA==", "comment"=>{"name"=>"Gopi Krishna", "message"=>"Please explain the post", "post_id"=>"62617e25f055214175400d17"}, "commit"=>"Create Comment"}
+MONGODB | localhost:27017 req:42 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "limit"=>1, "singleBatch"=>true, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:42 | cookbook.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 req:43 conn:1:1 sconn:53 | cookbook.insert | STARTED | {"insert"=>"comments", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('62617eeff055214175400d19'), "name"=>"Gopi Krishna", "message"=>"Please explain the post", "post_id"=>BSON::ObjectId('62617e25f055214175400d17')}], "$db"=>"cookbook", "lsid"=...
+MONGODB | localhost:27017 req:43 | cookbook.insert | SUCCEEDED | 0.086s
+Redirected to http://localhost:3000/comments/62617eeff055214175400d19
+Completed 302 Found in 97ms (MongoDB: 0.1ms | Allocations: 3113)
+
+
+Started GET "/comments/62617eeff055214175400d19" for ::1 at 2022-04-21 21:27:35 +0530
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"62617eeff055214175400d19"}
+MONGODB | localhost:27017 req:44 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"comments", "filter"=>{"_id"=>BSON::ObjectId('62617eeff055214175400d19')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:44 | cookbook.find | SUCCEEDED | 0.001s
+  Rendering comments/show.html.erb within layouts/application
+  Rendered comments/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 291)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 14.7ms | MongoDB: 0.0ms | Allocations: 8727)
+
+
+Started GET "/comments" for ::1 at 2022-04-21 21:27:40 +0530
+Processing by CommentsController#index as HTML
+  Rendering comments/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:46 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"comments", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:46 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered comments/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2029)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.0ms | MongoDB: 0.0ms | Allocations: 8709)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:27:51 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:48 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:48 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1754)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.1ms | MongoDB: 0.0ms | Allocations: 8303)
+
+
+Started GET "/posts/62617e25f055214175400d17" for ::1 at 2022-04-21 21:27:55 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62617e25f055214175400d17"}
+MONGODB | localhost:27017 req:49 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:49 | cookbook.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.erb within layouts/application
+MONGODB | localhost:27017 req:50 conn:1:1 sconn:53 | cookbook.count | STARTED | {"count"=>"comments", "query"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:50 | cookbook.count | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:51 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"comments", "filter"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:51 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3717)
+Completed 500 Internal Server Error in 9ms (MongoDB: 0.0ms | Allocations: 5608)
+
+
+  
+ActionView::Template::Error (Missing partial comments/_comment with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/oscarmild/Documents/workspack/rails-expo/blog/app/views"
+):
+    14:     <h2 class="subtitle is-5">
+    15:       <strong><%= @post.comments.count %></strong> Comments
+    16:     </h2>
+    17:     <%= render @post.comments %>
+    18:     <div class="comment-form">
+    19:       <hr />
+    20:       <h3 class="subtitle is-3">Leave a reply</h3>
+  
+app/views/posts/show.html.erb:17
+Started GET "/posts" for ::1 at 2022-04-21 21:28:00 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:53 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:53 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1744)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.2ms | MongoDB: 0.0ms | Allocations: 8300)
+
+
+Started GET "/posts/62617e25f055214175400d17" for ::1 at 2022-04-21 21:28:02 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62617e25f055214175400d17"}
+MONGODB | localhost:27017 req:54 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:54 | cookbook.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.erb within layouts/application
+MONGODB | localhost:27017 req:55 conn:1:1 sconn:53 | cookbook.count | STARTED | {"count"=>"comments", "query"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:55 | cookbook.count | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:56 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"comments", "filter"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:56 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3594)
+Completed 500 Internal Server Error in 8ms (MongoDB: 0.0ms | Allocations: 5474)
+
+
+  
+ActionView::Template::Error (Missing partial comments/_comment with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/oscarmild/Documents/workspack/rails-expo/blog/app/views"
+):
+    14:     <h2 class="subtitle is-5">
+    15:       <strong><%= @post.comments.count %></strong> Comments
+    16:     </h2>
+    17:     <%= render @post.comments %>
+    18:     <div class="comment-form">
+    19:       <hr />
+    20:       <h3 class="subtitle is-3">Leave a reply</h3>
+  
+app/views/posts/show.html.erb:17
+Started GET "/posts/62617e25f055214175400d17" for ::1 at 2022-04-21 21:32:00 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62617e25f055214175400d17"}
+MONGODB | localhost:27017 req:81 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:81 | cookbook.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.erb within layouts/application
+MONGODB | localhost:27017 req:82 conn:1:1 sconn:53 | cookbook.count | STARTED | {"count"=>"comments", "query"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:82 | cookbook.count | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:83 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"comments", "filter"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:83 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 16.6ms | Allocations: 5633)
+  Rendered comments/_form.html.erb (Duration: 3.2ms | Allocations: 1275)
+  Rendered posts/show.html.erb within layouts/application (Duration: 30.7ms | Allocations: 10461)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 42.2ms | MongoDB: 0.0ms | Allocations: 19168)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:32:07 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:85 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:85 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1995)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.1ms | MongoDB: 0.0ms | Allocations: 8686)
+
+
+Started GET "/posts/62617e25f055214175400d17" for ::1 at 2022-04-21 21:32:09 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62617e25f055214175400d17"}
+MONGODB | localhost:27017 req:86 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:86 | cookbook.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.erb within layouts/application
+MONGODB | localhost:27017 req:87 conn:1:1 sconn:53 | cookbook.count | STARTED | {"count"=>"comments", "query"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:87 | cookbook.count | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:88 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"comments", "filter"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:88 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.3ms | Allocations: 123)
+  Rendered comments/_form.html.erb (Duration: 1.6ms | Allocations: 931)
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 4094)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.6ms | MongoDB: 0.0ms | Allocations: 12082)
+
+
