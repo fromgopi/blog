@@ -337,3 +337,323 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 34ms (Views: 32.8ms | MongoDB: 0.0ms | Allocations: 17167)
 
 
+Started GET "/posts" for ::1 at 2022-04-21 21:23:37 +0530
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 4ms (MongoDB: 0.0ms | Allocations: 1425)
+
+
+  
+SyntaxError (/Users/oscarmild/Documents/workspack/rails-expo/blog/app/models/post.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+...has_many :comments, dependent :destroy
+...                              ^):
+  
+app/models/post.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/post.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/post.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/controllers/posts_controller.rb:6:in `index'
+Started GET "/posts" for ::1 at 2022-04-21 21:23:56 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:53 | cookbook.saslContinue | STARTED | {}
+MONGODB | localhost:27017 req:6 | cookbook.saslContinue | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:7 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:7 | cookbook.find | SUCCEEDED | 0.000s
+  Rendered posts/index.html.erb within layouts/application (Duration: 23.6ms | Allocations: 26761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 692ms (Views: 685.1ms | MongoDB: 0.0ms | Allocations: 1688520)
+
+
+Started GET "/posts/new" for ::1 at 2022-04-21 21:23:59 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 24.2ms | Allocations: 10106)
+  Rendered posts/new.html.erb within layouts/application (Duration: 25.5ms | Allocations: 10460)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 33.1ms | MongoDB: 0.0ms | Allocations: 17176)
+
+
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+Started POST "/posts" for ::1 at 2022-04-21 21:24:13 +0530
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"IK9VCLpq6TZGRkDqa+7MmPW0HiHArVYFi5uK1x5UZuleIQUlulx89ztH+VMs92UxtqlFxNB8afCeINAoPhbx+A==", "post"=>{"title"=>"Nyc Post", "body"=>"Hellow Post"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 req:9 conn:1:1 sconn:53 | cookbook.insert | STARTED | {"insert"=>"posts", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('62617e25f055214175400d17'), "title"=>"Nyc Post", "body"=>"Hellow Post"}], "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:9 | cookbook.insert | SUCCEEDED | 0.090s
+Redirected to http://localhost:3000/posts/62617e25f055214175400d17
+Completed 302 Found in 103ms (MongoDB: 0.1ms | Allocations: 13236)
+
+
+Started GET "/posts/62617e25f055214175400d17" for ::1 at 2022-04-21 21:24:13 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62617e25f055214175400d17"}
+MONGODB | localhost:27017 req:10 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:10 | cookbook.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 268)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 11.0ms | MongoDB: 0.0ms | Allocations: 8477)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:24:15 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:11 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:11 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1753)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.6ms | MongoDB: 0.0ms | Allocations: 8304)
+
+
+Started GET "/posts/62617e25f055214175400d17" for ::1 at 2022-04-21 21:24:20 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62617e25f055214175400d17"}
+MONGODB | localhost:27017 req:13 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:13 | cookbook.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 86)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.8ms | MongoDB: 0.0ms | Allocations: 8105)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:25:33 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:21 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:21 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2001)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.4ms | MongoDB: 0.0ms | Allocations: 9254)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:25:34 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:22 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:22 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1755)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.7ms | MongoDB: 0.0ms | Allocations: 8307)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:26:54 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:31 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:31 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2002)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.9ms | MongoDB: 0.0ms | Allocations: 9267)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:26:56 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:32 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:32 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1752)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.9ms | MongoDB: 0.0ms | Allocations: 8304)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:26:56 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:34 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:34 | cookbook.find | SUCCEEDED | 0.002s
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1743)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.9ms | MongoDB: 0.0ms | Allocations: 8282)
+
+
+Started GET "/" for ::1 at 2022-04-21 21:27:01 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/oscarmild/.rvm/gems/ruby-2.6.9/gems/railties-6.0.4.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/oscarmild/.rvm/gems/ruby-2.6.9/gems/railties-6.0.4.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.8ms | Allocations: 189)
+Completed 200 OK in 9ms (Views: 7.6ms | MongoDB: 0.0ms | Allocations: 931)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:27:05 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:35 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:35 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3477)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.5ms | MongoDB: 0.0ms | Allocations: 18010)
+
+
+Started GET "/posts/62617e25f055214175400d17" for ::1 at 2022-04-21 21:27:07 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62617e25f055214175400d17"}
+MONGODB | localhost:27017 req:37 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:37 | cookbook.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.erb within layouts/application
+MONGODB | localhost:27017 req:38 conn:1:1 sconn:53 | cookbook.count | STARTED | {"count"=>"comments", "query"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:38 | cookbook.count | SUCCEEDED | 0.005s
+MONGODB | localhost:27017 req:39 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"comments", "filter"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:39 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 5.1ms | Allocations: 1462)
+  Rendered posts/show.html.erb within layouts/application (Duration: 17.0ms | Allocations: 4895)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 29.4ms | MongoDB: 0.0ms | Allocations: 13019)
+
+
+Started POST "/comments" for ::1 at 2022-04-21 21:27:35 +0530
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"EYLVwIXqTd4gHn7h2DomD/PzQnxIsyfqZkfMtnhdn9MzepcZ6OObpTps6baLFbYBDuKo0E+4N5OycYb/gvATkA==", "comment"=>{"name"=>"Gopi Krishna", "message"=>"Please explain the post", "post_id"=>"62617e25f055214175400d17"}, "commit"=>"Create Comment"}
+MONGODB | localhost:27017 req:42 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "limit"=>1, "singleBatch"=>true, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:42 | cookbook.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 req:43 conn:1:1 sconn:53 | cookbook.insert | STARTED | {"insert"=>"comments", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('62617eeff055214175400d19'), "name"=>"Gopi Krishna", "message"=>"Please explain the post", "post_id"=>BSON::ObjectId('62617e25f055214175400d17')}], "$db"=>"cookbook", "lsid"=...
+MONGODB | localhost:27017 req:43 | cookbook.insert | SUCCEEDED | 0.086s
+Redirected to http://localhost:3000/comments/62617eeff055214175400d19
+Completed 302 Found in 97ms (MongoDB: 0.1ms | Allocations: 3113)
+
+
+Started GET "/comments/62617eeff055214175400d19" for ::1 at 2022-04-21 21:27:35 +0530
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"62617eeff055214175400d19"}
+MONGODB | localhost:27017 req:44 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"comments", "filter"=>{"_id"=>BSON::ObjectId('62617eeff055214175400d19')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:44 | cookbook.find | SUCCEEDED | 0.001s
+  Rendering comments/show.html.erb within layouts/application
+  Rendered comments/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 291)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 14.7ms | MongoDB: 0.0ms | Allocations: 8727)
+
+
+Started GET "/comments" for ::1 at 2022-04-21 21:27:40 +0530
+Processing by CommentsController#index as HTML
+  Rendering comments/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:46 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"comments", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:46 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered comments/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2029)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.0ms | MongoDB: 0.0ms | Allocations: 8709)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:27:51 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:48 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:48 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1754)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.1ms | MongoDB: 0.0ms | Allocations: 8303)
+
+
+Started GET "/posts/62617e25f055214175400d17" for ::1 at 2022-04-21 21:27:55 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62617e25f055214175400d17"}
+MONGODB | localhost:27017 req:49 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:49 | cookbook.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.erb within layouts/application
+MONGODB | localhost:27017 req:50 conn:1:1 sconn:53 | cookbook.count | STARTED | {"count"=>"comments", "query"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:50 | cookbook.count | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:51 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"comments", "filter"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:51 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3717)
+Completed 500 Internal Server Error in 9ms (MongoDB: 0.0ms | Allocations: 5608)
+
+
+  
+ActionView::Template::Error (Missing partial comments/_comment with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/oscarmild/Documents/workspack/rails-expo/blog/app/views"
+):
+    14:     <h2 class="subtitle is-5">
+    15:       <strong><%= @post.comments.count %></strong> Comments
+    16:     </h2>
+    17:     <%= render @post.comments %>
+    18:     <div class="comment-form">
+    19:       <hr />
+    20:       <h3 class="subtitle is-3">Leave a reply</h3>
+  
+app/views/posts/show.html.erb:17
+Started GET "/posts" for ::1 at 2022-04-21 21:28:00 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:53 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:53 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1744)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.2ms | MongoDB: 0.0ms | Allocations: 8300)
+
+
+Started GET "/posts/62617e25f055214175400d17" for ::1 at 2022-04-21 21:28:02 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62617e25f055214175400d17"}
+MONGODB | localhost:27017 req:54 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:54 | cookbook.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.erb within layouts/application
+MONGODB | localhost:27017 req:55 conn:1:1 sconn:53 | cookbook.count | STARTED | {"count"=>"comments", "query"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:55 | cookbook.count | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:56 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"comments", "filter"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:56 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3594)
+Completed 500 Internal Server Error in 8ms (MongoDB: 0.0ms | Allocations: 5474)
+
+
+  
+ActionView::Template::Error (Missing partial comments/_comment with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/oscarmild/Documents/workspack/rails-expo/blog/app/views"
+):
+    14:     <h2 class="subtitle is-5">
+    15:       <strong><%= @post.comments.count %></strong> Comments
+    16:     </h2>
+    17:     <%= render @post.comments %>
+    18:     <div class="comment-form">
+    19:       <hr />
+    20:       <h3 class="subtitle is-3">Leave a reply</h3>
+  
+app/views/posts/show.html.erb:17
+Started GET "/posts/62617e25f055214175400d17" for ::1 at 2022-04-21 21:32:00 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62617e25f055214175400d17"}
+MONGODB | localhost:27017 req:81 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:81 | cookbook.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.erb within layouts/application
+MONGODB | localhost:27017 req:82 conn:1:1 sconn:53 | cookbook.count | STARTED | {"count"=>"comments", "query"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:82 | cookbook.count | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:83 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"comments", "filter"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:83 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 16.6ms | Allocations: 5633)
+  Rendered comments/_form.html.erb (Duration: 3.2ms | Allocations: 1275)
+  Rendered posts/show.html.erb within layouts/application (Duration: 30.7ms | Allocations: 10461)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 42.2ms | MongoDB: 0.0ms | Allocations: 19168)
+
+
+Started GET "/posts" for ::1 at 2022-04-21 21:32:07 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | localhost:27017 req:85 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:85 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1995)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.1ms | MongoDB: 0.0ms | Allocations: 8686)
+
+
+Started GET "/posts/62617e25f055214175400d17" for ::1 at 2022-04-21 21:32:09 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62617e25f055214175400d17"}
+MONGODB | localhost:27017 req:86 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:86 | cookbook.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.erb within layouts/application
+MONGODB | localhost:27017 req:87 conn:1:1 sconn:53 | cookbook.count | STARTED | {"count"=>"comments", "query"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:87 | cookbook.count | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:88 conn:1:1 sconn:53 | cookbook.find | STARTED | {"find"=>"comments", "filter"=>{"post_id"=>BSON::ObjectId('62617e25f055214175400d17')}, "$db"=>"cookbook", "lsid"=>{"id"=><BSON::Binary:0x2750537980 type=uuid data=0x4f9dc7089c7045f3...>}}
+MONGODB | localhost:27017 req:88 | cookbook.find | SUCCEEDED | 0.001s
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.3ms | Allocations: 123)
+  Rendered comments/_form.html.erb (Duration: 1.6ms | Allocations: 931)
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 4094)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.6ms | MongoDB: 0.0ms | Allocations: 12082)
+
+
