@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
   end
  
   # GET /comments/1 or /comments/1.json 
-  def show
+  def show 
   end 
 
   # GET /comments/new 
