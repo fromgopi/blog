@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
   # GET /comments/1/edit
   def edit
   end
-
+ 
   # POST /comments or /comments.json
   def create
     @comment = Comment.new(comment_params)
