@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
   def show
   end 
 
-  # GET /comments/new
+  # GET /comments/new 
   def new
     @comment = Comment.new
   end
